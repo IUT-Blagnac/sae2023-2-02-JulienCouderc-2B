@@ -13,7 +13,7 @@ public class ExerciceSimplicitePireTest {
         // Chaine à 1 mot
         assertEquals("Erreur de chaine à 1 mot", List.of("OK"), ExerciceSimplicitePire.solution("OK",List.of('a', 'b', 'c', 'd', 'e')));
         // Chaine vide
-        assertEquals(List.of(""), ExerciceSimplicitePire.solution("",List.of('6', 't', 'n', 'o', 'b')));
+        assertEquals(List.of(), ExerciceSimplicitePire.solution("",List.of('6', 't', 'n', 'o', 'b')));        
         // Chaine donnée en exemple
         assertEquals(List.of("fait", "Il", "aujourd", "aout", "beau", "hui", "comme", "en"), ExerciceSimplicitePire.solution("Il fait beau aujourd'hui comme en aout",List.of('f', 'I', 'z', 'u', 'k', 'a', 'b', 'o')));
         // Ajoutez vos test ici...
