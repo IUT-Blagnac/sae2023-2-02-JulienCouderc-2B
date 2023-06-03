@@ -10,19 +10,20 @@ public class ExerciceSimpliciteMeilleur {
         List<String> motsClasses = new ArrayList<>();
         List<String> motsAvecLettreInconnue = new ArrayList<>();
 
-        for (String mot : mots) {
+        for (int i = 0; i < mots.length; i++) {
+            String mot = mots[i];
             if (mot.length() > 0) {
                 if (commenceParLettre(mot, ordre)) {
-                    boolean motInseré = false;
-                    for (int i = 0; i < motsClasses.size(); i++) {
-                        String motClasse = motsClasses.get(i);
+                    boolean motInsere = false;
+                    for (int j = 0; j < motsClasses.size(); j++) {
+                        String motClasse = motsClasses.get(j);
                         if (compareMots(mot, motClasse, ordre) < 0) {
-                            motsClasses.add(i, mot);
-                            motInseré = true;
+                            motsClasses.add(j, mot);
+                            motInsere = true;
                             break;
                         }
                     }
-                    if (!motInseré) {
+                    if (!motInsere) {
                         motsClasses.add(mot);
                     }
                 } else {
