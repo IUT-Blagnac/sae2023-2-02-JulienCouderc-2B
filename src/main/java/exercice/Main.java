@@ -29,7 +29,7 @@ public class Main {
 
         start = System.nanoTime();
         System.out.println(ExerciceSobrietePire.solution(texte, ordre));
-        System.out.println("Temps exec 4 : " + (System.nanoTime() - start) / 1_000_000.0);
+        System.out.println("Temps exec 5 : " + (System.nanoTime() - start) / 1_000_000.0);
 
         // output: [classer, texte, exemple, exemples, exemplaire, 672, xylophone, a,
         // ae, at, mignon, de, wario]
