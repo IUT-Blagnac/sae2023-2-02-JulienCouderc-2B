@@ -23,6 +23,10 @@ public class Main {
         System.out.println(ExerciceEfficacePire.solution(texte, ordre));
         System.out.println("Temps exec 3 : " + (System.nanoTime() - start) / 1_000_000.0);
 
+        start = System.nanoTime();
+        System.out.println(ExerciceSobrieteMeilleur.solution(texte, ordre));
+        System.out.println("Temps exec 4 : " + (System.nanoTime() - start) / 1_000_000.0);
+
         // output: [classer, texte, exemple, exemples, exemplaire, 672, xylophone, a,
         // ae, at, mignon, de, wario]
     }
