@@ -1,14 +1,16 @@
 package exercice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class ExerciceSimpliciteMeilleur {
+public class ExerciceEfficacePire {
     public static List<String> solution(String str, List<Character> ordre) {
         String[] mots = str.split("[^a-zA-Z0-9]");
 
         List<String> motsClasses = new ArrayList<>();
         List<String> motsAvecLettreInconnue = new ArrayList<>();
+        List<Object> alphabetNumerique = creerAlphabetNumerique();
 
         for (String mot : mots) {
             if (!mot.isEmpty()) {
@@ -32,6 +34,27 @@ public class ExerciceSimpliciteMeilleur {
         }
 
         motsClasses.addAll(motsAvecLettreInconnue);
+        List<String> motsClassesCopie = new ArrayList<>();
+        for (int k = 0; k < 3; k++) {
+            motsClassesCopie.addAll(motsClasses);
+
+            // Vérifie les caractères conformes à l'intérieur des boucles for pour rendre le programme moins efficace
+            for (String motClasse : motsClassesCopie) {
+                if (!verifierCaracteres(motClasse, alphabetNumerique)) {
+                    return null;
+                }
+            }
+        }
+
+        List<String> motsClassesReformes = new ArrayList<>();
+        int tailleListeInitiale = motsClasses.size();
+        for (int i = 0; i < tailleListeInitiale; i++) {
+            motsClassesReformes.add(motsClassesCopie.get(i));
+        }
+
+        motsClasses = motsClassesReformes;
+
+        
 
         return motsClasses;
     }
@@ -68,5 +91,31 @@ public class ExerciceSimpliciteMeilleur {
         }
 
         return Integer.compare(mot1.length(), mot2.length());
+    }
+
+    private static boolean verifierCaracteres(String mot, List<Object> alphabetNumerique) {
+        for (char caractere : mot.toCharArray()) {
+            if (!alphabetNumerique.contains(caractere)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static List<Object> creerAlphabetNumerique() {
+        List<Object> alphabetNumerique = new ArrayList<>();
+        alphabetNumerique.addAll(Arrays.asList(
+                'a', 'à', 'á', 'â', 'ä', 'b', 'c', 'ç', 'd', 'e', 'è', 'é', 'ê', 'ë', 'f', 'g', 'h', 'i', 'ì', 'í', 'î', 'ï',
+                'j', 'k', 'l', 'm', 'n', 'o', 'ò', 'ó', 'ô', 'ö', 'p', 'q', 'r', 's', 't', 'u', 'ù', 'ú', 'û', 'ü', 'v', 'w', 'x', 'y', 'ÿ',
+                'z',
+                'A', 'À', 'Á', 'Â', 'Ä', 'B', 'C', 'Ç', 'D', 'E', 'È', 'É', 'Ê', 'Ë', 'F', 'G', 'H', 'I', 'Ì', 'Í', 'Î', 'Ï',
+                'J', 'K', 'L', 'M', 'N', 'O', 'Ò', 'Ó', 'Ô', 'Ö', 'P', 'Q', 'R', 'S', 'T', 'U', 'Ù', 'Ú', 'Û', 'Ü', 'V', 'W', 'X', 'Y', 'Ÿ',
+                'Z',
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                ' ',
+                "",
+                null
+        ));
+        return alphabetNumerique;
     }
 }
