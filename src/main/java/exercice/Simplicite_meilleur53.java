@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class Simplicite_meilleur {
+public class Simplicite_meilleur53 {
     public static List<String> solution(String str, List<Character> ordre) {
        
         List<String> mots= Arrays.asList(str.split(" "));
