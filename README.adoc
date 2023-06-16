@@ -210,8 +210,9 @@ Voici les pré-requis pour exécuter nos codes d'évaluation.
 
 === Références
 
-- link:http://xyz[Mon super outil XYZ]
-- ...
+- Utilisation de la méthode java : System.nanoTime()
+- Utilisation de l'extension SonarLint link:https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode[SonarLink extension]
+- Utilisation de l'extension Resource Monitor link:https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor[Resource Monitor extension]
 
 == Généralités, notation de la SAÉ et résultat du concours
 
