@@ -16,7 +16,7 @@ import exercice.sobrietepire17;
 
 import java.util.*;
 
-public class ExerciceSimpliciteMeilleurTest {
+public class codeTests {
     @Test
     public void testSolution() {
         // Chaine simple avec ordre complet
@@ -24,7 +24,7 @@ public class ExerciceSimpliciteMeilleurTest {
         // Chaine à 1 mot
         assertEquals("Erreur de chaine à 1 mot", List.of("OK"),efficacitepire57.solution("OK", List.of('a', 'b', 'c', 'd', 'e')));
         // Chaine vide
-        //assertEquals(List.of(""), sobrietepire17.solution("", List.of('6', 't', 'n', 'o', 'b')));
+        assertEquals(List.of(""), sobrietepire17.solution("", List.of('6', 't', 'n', 'o', 'b')));
         // Chaine vide 2
         assertEquals(List.of(), efficacitepire57.solution("",List.of('6', 't', 'n','o', 'b')));
         // Chaine donnée en exemple

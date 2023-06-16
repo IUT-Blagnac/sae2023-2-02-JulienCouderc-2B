@@ -41,6 +41,7 @@ import java.time.format.*;
 import java.time.temporal.*;
 
 
+
 public class efficacitepire57 {
     public static List<String> solution(String str, List<Character> ordre) {
         List<String> mots = new ArrayList<>();
@@ -55,6 +56,7 @@ public class efficacitepire57 {
                     motActuel.setLength(0);
                 }
             }
+
 
         }
         if (motActuel.length() > 0) {

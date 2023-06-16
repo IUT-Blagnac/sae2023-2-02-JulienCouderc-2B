@@ -1,12 +1,12 @@
-package exercice;
 
+package exercice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class sobrietepire57 {
+public class Exercice {
     public static List<String> solution(String str, List<Character> ordre) {
         List<String> mots = new ArrayList<>();
         StringBuilder motActuel = new StringBuilder();
