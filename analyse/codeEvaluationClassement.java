@@ -1,3 +1,7 @@
+import java.util.List;
+
+import exercice.sobrietemeilleur7;
+
 public class codeEvaluationClassement {
      public static void main(String[] args) {
         String texte = "exemple de texte exemplaire exemples a zoing classer wario 672 exemplaires exemplairem xylophone mignon ae at";
